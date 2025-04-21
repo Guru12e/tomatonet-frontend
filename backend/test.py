@@ -1,6 +1,5 @@
 import torch
 from torchvision import transforms
-from PIL import Image
 from model import DualAttentionTomatoNet
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
