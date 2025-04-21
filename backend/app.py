@@ -6,7 +6,7 @@ import base64
 from test import predict
 
 app = Flask(__name__)
-CORS(app)
+CORS(app ,resources={r"/*": {"origins": "*"}})
 
 @app.route('/predict-image', methods=['POST'])
 def predictImage():
