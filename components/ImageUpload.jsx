@@ -24,7 +24,6 @@ export default function ImageUpload() {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ image: base64Image }),
-            credentials: "include",
           }
         );
 
