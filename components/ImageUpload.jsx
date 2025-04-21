@@ -16,33 +16,15 @@ export default function ImageUpload() {
 
       try {
         setLoading(true);
-        // const response = await fetch(
-        //   "https://tomatonet.onrender.com/predict-image",
-        //   {
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({ image: base64Image }),
-        //     credentials: "include",
-        //   }
-        // );
-
         const response = await fetch(
-          "https://report-api-0fic.onrender.com/freeReport",
+          "https://tomatonet-backend.onrender.com/predict-image",
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-              dob: `2004-12-25 05:50:00`,
-              location: "Madurai",
-              lat: parseFloat("9.9252"),
-              lon: parseFloat("78.1198"),
-              gender: "male",
-              name: "Guru",
-            }),
+            body: JSON.stringify({ image: base64Image }),
+            credentials: "include",
           }
         );
 
